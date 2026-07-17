@@ -1,0 +1,308 @@
+/* ==========================================================================
+   VOUCHER INFINITY - BLOG STYLES
+   Tailored to integrate with Voucher Infinity's core branding design.
+   ========================================================================== */
+
+/* ---------- Page Structure ---------- */
+.blog-page {
+    background-color: #FAFBFC;
+}
+
+/* ---------- Blog Hero Section ---------- */
+.blog-hero {
+
+    /* background: linear-gradient(135deg, var(--secondary-color) 0%, #3e1b4a 60%, var(--dark-color) 100%); */
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+}
+
+/* .blog-hero::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: -200px;
+    right: -100px;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(162, 130, 238, 0.15) 0%, transparent 70%);
+} */
+
+.blog-hero h1 {
+    font-size: clamp(2.25rem, 5vw, 3.75rem);
+    font-weight: 800;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.blog-hero p {
+    font-size: 1.15rem;
+    color: rgba(255, 255, 255, 0.8);
+    max-width: 600px;
+}
+
+
+
+
+
+
+img {
+    width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+
+/* ===========================
+   HERO
+=========================== */
+
+.hero {
+
+    padding: 90px 0 70px;
+    text-align: center;
+    background: var(--theme-white);
+
+}
+
+.subtitle {
+
+    display: inline-block;
+    padding: 8px 18px;
+    border-radius: 50px;
+
+    background: var(--light-primary-color);
+    color: var(--primary-color);
+
+    font-weight: 600;
+    font-size: .9rem;
+    letter-spacing: 1px;
+
+}
+
+.hero h1 {
+
+    margin: 18px 0;
+    font-family: var(--heading-font);
+    font-size: clamp(2rem, 5vw, 3.4rem);
+    color: var(--dark-color);
+
+}
+
+.hero p {
+
+    max-width: 700px;
+    margin: auto;
+    color: #6b7280;
+
+}
+
+/* ===========================
+   BLOG
+=========================== */
+
+.blog-section {
+
+    padding: 80px 0;
+
+}
+
+.blog-grid {
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 25px;
+
+}
+
+/* ===========================
+   CARD
+=========================== */
+
+.card {
+
+    background: var(--theme-white);
+    border-radius: var(--border-radius-lg);
+    overflow: hidden;
+
+    box-shadow: var(--box-shadow);
+
+    transition: var(--transition);
+
+}
+
+.card:hover {
+
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-card);
+
+}
+
+.image {
+
+    position: relative;
+    overflow: hidden;
+
+}
+
+.image img {
+
+    height: 240px;
+    object-fit: cover;
+    transition: .6s;
+
+}
+
+.card:hover img {
+
+    transform: scale(1.08);
+
+}
+
+.badge {
+
+    position: absolute;
+    left: 20px;
+    top: 20px;
+
+    background: var(--primary-gradient);
+    color: white;
+
+    padding: 8px 16px;
+    border-radius: 50px;
+
+    font-size: .8rem;
+    font-weight: 600;
+
+    box-shadow: var(--shadow-sm);
+
+}
+
+.content {
+
+    padding: 28px;
+
+}
+
+.meta {
+
+    display: flex;
+    gap: 12px;
+    align-items: center;
+
+    margin-bottom: 18px;
+
+    font-size: .9rem;
+    color: #7b7b7b;
+
+}
+
+.meta span:last-child {
+
+    color: var(--primary-color);
+
+}
+
+.content h2 {
+
+    font-family: var(--heading-font);
+    font-size: 1.45rem;
+    color: var(--dark-color);
+
+    line-height: 1.45;
+    margin-bottom: 15px;
+
+    transition: var(--transition);
+
+}
+
+.card:hover h2 {
+
+    color: var(--primary-color);
+
+}
+
+.content p {
+
+    color: #6b7280;
+    margin-bottom: 24px;
+
+}
+
+/* ===========================
+   BUTTON
+=========================== */
+
+.btn {
+
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 13px 24px;
+
+    border-radius: 50px;
+
+    background: var(--gradient-btn);
+    color: var(--theme-white);
+
+    font-weight: 600;
+
+    transition: var(--transition);
+
+    box-shadow: var(--shadow-sm);
+
+}
+
+.btn:hover {
+
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:768px) {
+
+    .hero {
+
+        padding: 70px 0 50px;
+
+    }
+
+    .blog-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .content {
+
+        padding: 22px;
+
+    }
+
+    .content h2 {
+
+        font-size: 1.25rem;
+
+    }
+
+}
+
+.blog-btn {
+    display: inline-block;
+    color: var(--secondary-color);
+    font-weight: 600;
+}

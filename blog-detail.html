@@ -1,0 +1,1226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title id="page-title">Blog Article || Voucher Infinity</title>
+  <meta name="description" id="page-meta-desc"
+    content="Read expert study tips, official exam breakdowns, and guide sheets for international certifications on Voucher Infinity Blog.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- CSS Frameworks & Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!-- Custom Stylesheets -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/blog.css">
+  <style>
+    /* Self-contained blog detail redesign. */
+    :root {
+      --ink: #10243e;
+      --slate: #5d6f86;
+      --line: #dfe8f0;
+      --canvas: #f5f8fb;
+      --gold: #e99b35;
+    }
+
+    body.blog-page {
+      background: var(--canvas);
+      color: var(--ink);
+      font-family: Inter, sans-serif;
+    }
+
+    .top-header {
+      position: relative;
+      z-index: 1041;
+      padding: 9px 0;
+      background: #082b42;
+      font-size: .78rem;
+    }
+
+    .top-header a {
+      opacity: .9;
+      transition: opacity .2s ease;
+    }
+
+    .top-header a:hover {
+      opacity: 1;
+    }
+
+    #mainNavbar {
+      /* top: 37px; */
+
+      background: rgba(255, 255, 255, .95);
+      box-shadow: 0 1px 0 rgba(16, 36, 62, .08);
+      backdrop-filter: blur(12px);
+    }
+
+    #mainNavbar.sticky {
+      box-shadow: 0 10px 28px rgba(20, 45, 72, .12);
+    }
+
+    .nav-logo {
+      max-width: 112px !important;
+    }
+
+    #mainNavbar .nav-link {
+      padding: .55rem .85rem;
+      color: #34465f;
+      font-size: .9rem;
+      font-weight: 600;
+    }
+
+    #mainNavbar .nav-link:hover,
+    #mainNavbar .nav-link.active {
+      color: var(--primary-color);
+    }
+
+    .blog-detail-hero {
+      position: relative;
+      overflow: hidden;
+      padding: 60px 10px;
+      /* background: linear-gradient(118deg, #e7f4f4 0%, #f7fafc 50%, #e9f0fb 100%); */
+    }
+
+    .blog-detail-hero::before {
+      position: absolute;
+      top: -215px;
+      right: -140px;
+      width: 520px;
+      height: 520px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(18, 103, 127, .18), transparent 68%);
+      content: '';
+    }
+
+    .blog-detail-hero .container {
+      position: relative;
+      max-width: 1060px;
+    }
+
+    .breadcrumb-custom {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      color: #7a899e;
+
+      font-size: .83rem;
+      font-weight: 600;
+
+    }
+
+    .breadcrumb-custom a {
+      color: var(--primary-color);
+      text-decoration: none;
+    }
+
+
+
+    .detail-hero-section .lead-text {
+
+      color: #53657d;
+      font-size: 1.05rem;
+      line-height: 1.75;
+    }
+
+    .price-display-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 14px;
+      /* margin: 30px 0; */
+    }
+
+    .price-now {
+      color: var(--dark-color);
+      font-family: Poppins, sans-serif;
+      font-size: 2.5rem;
+      font-weight: 800;
+      letter-spacing: -.05em;
+    }
+
+    .price-was {
+      margin-left: 10px;
+      color: #8592a4;
+      font-size: 1rem;
+      text-decoration-thickness: 1.5px;
+    }
+
+
+
+    .breadcrumb-custom a {
+      color: var(--primary-color) !important;
+      text-decoration: none;
+    }
+
+    .post-category-badge {
+      display: inline-block;
+      margin-top: 15px;
+      padding: .48rem .75rem;
+      border-radius: 999px;
+      background: #e6f5f2;
+      color: #147159;
+      font-size: .73rem;
+      font-weight: 800;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+
+    .blog-detail-hero h1 {
+      max-width: 900px;
+      margin: 16px 0 0;
+      color: white;
+      font-family: Poppins, sans-serif;
+
+      font-weight: 600;
+      line-height: 1.12;
+      letter-spacing: -.05em;
+
+    }
+
+    .meta-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 10px 25px;
+      color: var(--canvas);
+      font-size: .86rem;
+      /* background-color: white; */
+      padding: 15px;
+      border-radius: 5px;
+    }
+
+    .author-wrap,
+    .meta-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+    }
+
+    .meta-row i {
+      color: var(--primary-color);
+    }
+
+    .post-author-name {
+      color: var(--canvas);
+      /* font-weight: 700; */
+    }
+
+    .blog-detail-section {
+      padding: 64px 0 88px;
+    }
+
+    #article-banner-img {
+      height: min(52vw, 450px);
+      margin-bottom: 30px !important;
+      border: 1px solid rgba(18, 103, 127, .12);
+      border-radius: 18px !important;
+      box-shadow: 0 18px 36px rgba(19, 48, 77, .13) !important;
+      object-fit: cover;
+    }
+
+    .blog-post-content {
+      padding: clamp(24px, 4vw, 46px);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: #fff;
+      box-shadow: 0 14px 34px rgba(23, 49, 77, .055);
+      color: #3f5066;
+      font-size: 1rem;
+      line-height: 1.85;
+    }
+
+    .blog-post-content> :first-child {
+      margin-top: 0;
+    }
+
+    .blog-post-content h2 {
+      margin: 2rem 0 .8rem;
+      color: var(--ink);
+      font-family: Poppins, sans-serif;
+      font-size: clamp(1.35rem, 2.3vw, 1.75rem);
+      font-weight: 700;
+      letter-spacing: -.025em;
+    }
+
+    .blog-post-content h3 {
+      margin: 1.5rem 0 .65rem;
+      color: var(--secondary-color);
+      font-size: 1.08rem;
+      font-weight: 800;
+    }
+
+    .blog-post-content p {
+      margin-bottom: 1.25rem;
+    }
+
+    .blog-post-content ul,
+    .blog-post-content ol {
+      padding-left: 1.25rem;
+      margin: 1.15rem 0 1.5rem;
+    }
+
+    .blog-post-content li {
+      padding-left: .35rem;
+      margin-bottom: .58rem;
+    }
+
+    .blog-post-content blockquote {
+      margin: 1.8rem 0;
+      padding: 1.25rem 1.4rem;
+      border-left: 4px solid var(--gold);
+      border-radius: 0 12px 12px 0;
+      background: #fff7ea;
+      color: #715325;
+      font-family: Poppins, sans-serif;
+      font-size: 1.02rem;
+      font-weight: 600;
+      line-height: 1.6;
+    }
+
+    .tip-callout-box {
+      margin: 1.7rem 0;
+      padding: 1.25rem 1.35rem;
+      border: 1px solid #bfe1dc;
+      border-radius: 13px;
+      background: #edf9f7;
+    }
+
+    .tip-callout-box h5 {
+      margin: 0 0 .35rem;
+      color: #0c6d58;
+      font-size: .94rem;
+      font-weight: 800;
+    }
+
+    .tip-callout-box p {
+      margin: 0;
+      color: #41665f;
+      font-size: .92rem;
+    }
+
+    .blog-post-content table {
+      display: block;
+      width: 100%;
+      overflow-x: auto;
+      margin: 1.5rem 0;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      border-spacing: 0;
+      font-size: .87rem;
+      white-space: nowrap;
+    }
+
+    .blog-post-content th {
+      padding: .85rem 1rem;
+      background: #eaf4f7;
+      color: var(--secondary-color);
+      font-size: .75rem;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+    }
+
+    .blog-post-content td {
+      padding: .85rem 1rem;
+      border-top: 1px solid var(--line);
+    }
+
+    .blog-sidebar {
+      position: sticky;
+      top: 115px;
+    }
+
+    .sidebar-widget {
+      margin-bottom: 22px;
+      padding: 25px;
+      border: 1px solid var(--line);
+      border-radius: 15px;
+      background: #fff;
+      box-shadow: 0 12px 30px rgba(21, 51, 79, .055);
+    }
+
+    .widget-title {
+      margin: 0 0 18px;
+      padding-bottom: 11px;
+      border-bottom: 1px solid var(--line);
+      color: var(--ink);
+      font-family: Poppins, sans-serif;
+      font-size: 1.04rem;
+      font-weight: 700;
+    }
+
+    .sidebar-search-form {
+      display: flex;
+      overflow: hidden;
+      border: 1px solid #ccdce7;
+      border-radius: 9px;
+    }
+
+    .sidebar-search-form input {
+      min-width: 0;
+      flex: 1;
+      padding: .74rem .8rem;
+      border: 0;
+      outline: 0;
+      color: var(--ink);
+      font-size: .86rem;
+    }
+
+    .sidebar-search-form button {
+      width: 44px;
+      border: 0;
+      background: var(--secondary-color);
+      color: #fff;
+    }
+
+    .featured-voucher-widget {
+      margin-bottom: 22px;
+      padding: 29px 25px;
+      border-radius: 15px;
+      background: linear-gradient(145deg, #0b425c, #147e89);
+      box-shadow: 0 16px 31px rgba(7, 58, 83, .19);
+      color: #fff;
+    }
+
+    .voucher-widget-badge {
+      display: inline-block;
+      padding: .35rem .58rem;
+      border-radius: 99px;
+      background: rgba(255, 255, 255, .16);
+      font-size: .68rem;
+      font-weight: 800;
+      letter-spacing: .05em;
+      text-transform: uppercase;
+    }
+
+    .featured-voucher-widget h4 {
+      margin: 17px 0 8px;
+      font-family: Poppins, sans-serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+    }
+
+    .featured-voucher-widget p {
+      color: rgba(255, 255, 255, .8);
+      font-size: .86rem;
+      line-height: 1.65;
+    }
+
+    .voucher-widget-price {
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+      margin: 17px 0;
+    }
+
+    .voucher-widget-price .original {
+      color: rgba(255, 255, 255, .65);
+      font-size: .83rem;
+      text-decoration: line-through;
+    }
+
+    .voucher-widget-price .price {
+      color: #ffe2a6;
+      font-family: Poppins, sans-serif;
+      font-size: 1.65rem;
+      font-weight: 800;
+    }
+
+    .btn-widget-cta {
+      display: block;
+      padding: .76rem;
+      border-radius: 8px;
+      background: #fff;
+      color: var(--secondary-color);
+      font-size: .85rem;
+      font-weight: 800;
+      text-align: center;
+      text-decoration: none;
+    }
+
+    .sidebar-categories-list {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+
+    .sidebar-categories-list li+li {
+      border-top: 1px solid var(--line);
+    }
+
+    .sidebar-categories-list a {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: .74rem 0;
+      color: #43566e;
+      font-size: .88rem;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .sidebar-categories-list .badge {
+      border-radius: 99px;
+      background: #eaf4f7;
+      color: var(--primary-color);
+      font-size: .68rem;
+    }
+
+    .recent-post-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 0;
+      cursor: pointer;
+    }
+
+    .recent-post-wrapper+.recent-post-wrapper {
+      border-top: 1px solid var(--line);
+    }
+
+    .recent-post-wrapper .img-wrapper {
+      flex: 0 0 78px;
+      height: 66px;
+      overflow: hidden;
+      border-radius: 9px;
+      background: #e9f2f5;
+    }
+
+    .recent-post-wrapper .img-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform .3s ease;
+    }
+
+    .recent-post-wrapper h4 {
+      display: -webkit-box;
+      overflow: hidden;
+      margin: 0 0 5px;
+      color: var(--ink);
+      font-size: .82rem;
+      font-weight: 600;
+      line-height: 1.45;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+      transition: color .2s ease;
+    }
+
+    .recent-post-wrapper .read-more-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      color: var(--primary-color);
+      font-size: .68rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: .05em;
+    }
+
+    .recent-post-wrapper .read-more-btn::after {
+      content: '\\2192';
+      transition: transform .2s ease;
+    }
+
+    .recent-post-wrapper:hover .img-wrapper img {
+      transform: scale(1.08);
+    }
+
+    .recent-post-wrapper:hover h4 {
+      color: var(--primary-color);
+    }
+
+    .recent-post-wrapper:hover .read-more-btn::after {
+      transform: translateX(3px);
+    }
+
+    .related-posts-section {
+      margin-top: 72px;
+      padding-top: 58px;
+      border-top: 1px solid var(--line);
+    }
+
+    .text-primary-custom {
+      color: var(--ink) !important;
+      font-family: Poppins, sans-serif;
+      font-size: 1.65rem;
+      font-weight: 700;
+      letter-spacing: -.03em;
+    }
+
+    .blog-card {
+      height: 100%;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: #fff;
+      box-shadow: 0 10px 25px rgba(23, 49, 77, .055);
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+
+    .blog-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 18px 32px rgba(23, 49, 77, .11);
+    }
+
+    .blog-card-img-wrap {
+      overflow: hidden;
+      height: 180px;
+    }
+
+    .blog-card-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform .35s ease;
+    }
+
+    .blog-card:hover .blog-card-img-wrap img {
+      transform: scale(1.05);
+    }
+
+    .blog-card-body {
+      display: flex;
+      flex-direction: column;
+      height: calc(100% - 180px);
+      padding: 20px;
+    }
+
+    .blog-card-body .post-category-badge {
+      margin-top: 0;
+      font-size: .64rem;
+    }
+
+    .blog-card-body h3 {
+      margin: 13px 0 9px;
+      line-height: 1.4;
+    }
+
+    .blog-card-body h3 a {
+      color: var(--ink);
+      text-decoration: none;
+    }
+
+    .blog-card-body p {
+      color: var(--slate);
+    }
+
+    .post-meta-info {
+      color: #7a899b;
+      font-size: .78rem;
+      border-top: 1px solid var(--line);
+    }
+
+    .whatsapp-float {
+      width: 54px;
+      height: 54px;
+      right: 24px;
+      bottom: 24px;
+      box-shadow: 0 8px 22px rgba(14, 102, 63, .3);
+    }
+
+    @media (max-width: 991.98px) {
+      .top-header {
+        display: none;
+      }
+
+      #mainNavbar {
+        top: 0;
+      }
+
+      .blog-detail-hero {
+        padding: 132px 0 65px;
+      }
+
+      .blog-sidebar {
+        position: static;
+        margin-top: 4px;
+      }
+    }
+
+    @media (max-width: 575.98px) {
+      .blog-detail-hero {
+        padding: 115px 0 52px;
+      }
+
+      .blog-detail-hero h1 {
+        font-size: 2.1rem;
+      }
+
+      .meta-row {
+        gap: 9px 15px;
+        font-size: .78rem;
+      }
+
+      .blog-detail-section {
+        padding: 42px 0 62px;
+      }
+
+      #article-banner-img {
+        height: 240px;
+        margin-bottom: 20px !important;
+        border-radius: 13px !important;
+      }
+
+      .blog-post-content {
+        padding: 22px 19px;
+        font-size: .94rem;
+        line-height: 1.78;
+      }
+
+      .blog-post-content blockquote {
+        padding: 1rem 1.1rem;
+        font-size: .94rem;
+      }
+
+      .sidebar-widget,
+      .featured-voucher-widget {
+        padding: 21px;
+      }
+
+      .related-posts-section {
+        margin-top: 50px;
+        padding-top: 42px;
+      }
+    }
+
+    .recent-date {
+      font-size: 12px;
+      color: #585858;
+      font-weight: 300;
+    }
+  </style>
+</head>
+
+<body class="blog-page">
+
+  <!-- Top Header bar -->
+  <!-- <div class="top-header">
+    <div class="container">
+      <div class="d-flex align-items-center justify-content-end" style="gap:25px">
+        <a href="tel:+917428563177" style="color: white; text-decoration: none;">
+          <i class="fa-solid fa-phone me-1"></i>+91 74285 63177
+        </a>
+        <a href="mailto:Info@voucherinfinity.com" style="color: white; text-decoration: none;">
+          <i class="fa-solid fa-envelope me-1"></i> Info@voucherinfinity.com
+        </a>
+      </div>
+    </div>
+  </div> -->
+
+  <!-- Sticky Navbar -->
+  <nav class="navbar navbar-expand-lg sticky-top" id="mainNavbar">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="assets/images/logo.png" alt="Voucher Infinity" class="nav-logo" style="max-width: 100px;">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="vouchers.html">Vouchers</a></li>
+          <li class="nav-item"><a class="nav-link" href="exam-voucher-detail.html">Exam Vouchers</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link active" href="blog.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Blog Detail Hero Section -->
+  <header class="blog-detail-hero" style="background-image: url('https://images.unsplash.com/photo-1752225494606-ae09aca08bea?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8YmxvZyUyMGJhbm5lcnxlbnwwfHwwfHx8MA%3D%3D');  
+     background-position: left;
+   
+   ">
+    <div class="container">
+
+
+      <div class="blog-detail-main-title">
+        <h1>How to Prepare for the PTE Academic Exam in 30 Days: A Complete Study Plan</h1>
+      </div>
+
+      <div class="meta-row mt-4">
+
+        <div class="author-wrap">
+          <i class="fas fa-user-circle"></i> By <span class="post-author-name" id="article-author">Dr. Sarah
+            Miller</span>
+        </div>
+        <div class="meta-item">
+          <i class="far fa-calendar-alt"></i> <span id="article-date">July 12, 2026</span>
+        </div>
+        <div class="meta-item">
+          <i class="far fa-clock"></i> <span id="article-read-time">6 min read</span>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="container pt-3">
+    <div class="breadcrumb-custom text-muted mb-3">
+      <a href="index.html" class="text-muted">Home</a> <span>/</span> <a href="blog.html" class="text-muted">Blog</a>
+      <span>/</span> <span id="breadcrumb-current" class="text-secondary">Article</span>
+    </div>
+
+  </div>
+
+  <!-- Main Body Content Section -->
+  <section class="blog-detail-section">
+    <div class="container">
+      <div class="row g-5">
+        <!-- Left: Article Content -->
+        <div class="col-lg-8" data-aos="fade-right">
+          <!-- Featured post banner image -->
+          <img id="article-banner-img"
+            src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?q=80&w=800&auto=format&fit=crop"
+            class="img-fluid rounded-4 mb-4 shadow-sm w-100" style="max-height: 400px; object-fit: cover;"
+            alt="Article banner">
+
+
+          <div class="blog-post-content" id="article-body-content">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut autem magnam molestias cum repellat quo
+              similique ullam? Deserunt, magnam animi harum maxime molestiae laudantium perferendis minima dicta eveniet
+              nam ipsum?</p>
+            <h2>Lorem ipsum dolor</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut autem magnam molestias cum repellat quo
+              similique ullam?
+              Deserunt, magnam animi harum maxime molestiae laudantium perferendis minima dicta eveniet nam ipsum?</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut autem magnam molestias cum repellat quo
+              similique ullam?
+              Deserunt, magnam animi harum maxime molestiae laudantium perferendis minima dicta eveniet nam ipsum?</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut autem magnam molestias cum repellat quo
+              similique ullam?
+              Deserunt, magnam animi harum maxime molestiae laudantium perferendis minima dicta eveniet nam ipsum?</p>
+          </div>
+        </div>
+
+        <!-- Right: Sidebar Widgets -->
+        <div class="col-lg-4" data-aos="fade-left">
+          <aside class="blog-sidebar">
+
+            <!-- Search Widget -->
+            <!-- <div class="sidebar-widget">
+              <h4 class="widget-title">Search Articles</h4>
+              <form class="sidebar-search-form" onsubmit="event.preventDefault(); window.location.href='blog.html?search=' + document.getElementById('sidebar-search-input').value;">
+                <input type="text" id="sidebar-search-input" placeholder="Search blog...">
+                <button type="submit"><i class="fas fa-search"></i></button>
+              </form>
+            </div> -->
+
+            <!-- Custom featured voucher Booking widget -->
+            <!-- <div class="featured-voucher-widget" id="sidebar-voucher-promo">
+              <span class="voucher-widget-badge">Partner Offer</span>
+              <h4 id="promo-voucher-title">PTE Academic Voucher</h4>
+              <p>Get instant 100% genuine code with free official mock test and full booking support.</p>
+              <div class="voucher-widget-price">
+                <span class="original" id="promo-was-price">₹17,000</span>
+                <span class="price" id="promo-now-price">₹14,500</span>
+              </div>
+              <a href="exam-voucher-detail.html?exam=pte" class="btn-widget-cta" id="promo-cta-link">Buy & Save Now</a>
+            </div> -->
+
+            <!-- Categories Widget -->
+            <!-- <div class="sidebar-widget">
+              <h4 class="widget-title">Categories</h4>
+              <ul class="sidebar-categories-list">
+                <li><a href="blog.html">Exam Tips <span class="badge">2</span></a></li>
+                <li><a href="blog.html">Vouchers <span class="badge">1</span></a></li>
+                <li><a href="blog.html">Guides <span class="badge">1</span></a></li>
+              </ul>
+            </div> -->
+
+            <!-- Recent Posts Widget -->
+            <div class="sidebar-widget">
+              <h4 class="widget-title">Recent Posts</h4>
+              <div class="recent-posts-list" id="sidebar-recent-list">
+                <div class="recent-post-wrapper ">
+                  <div class="img-wrapper">
+                    <img src="assets/images/home/why-choose-us.jpg" alt="">
+                  </div>
+                  <div>
+                    <div class="recent-date">29-july-2026</div>
+                    <h4>How to Book the PTE Exam Online? </h4>
+                  </div>
+                </div>
+                <div class="recent-post-wrapper">
+                  <div class="img-wrapper">
+                    <img src="assets/images/home/why-choose-us.jpg" alt="">
+                  </div>
+                  <div>
+                    <div class="recent-date">29-july-2026</div>
+                    <h4>How to Book the PTE Exam Online? </h4>
+                  </div>
+                </div>
+                <div class="recent-post-wrapper">
+                  <div class="img-wrapper">
+                    <img src="assets/images/home/why-choose-us.jpg" alt="">
+                  </div>
+                  <div>
+                    <div class="recent-date">29-july-2026</div>
+                    <h4>How to Book the PTE Exam Online? </h4>
+                  </div>
+                </div>
+                <div class="recent-post-wrapper">
+                  <div class="img-wrapper">
+                    <img src="assets/images/home/why-choose-us.jpg" alt="">
+                  </div>
+                  <div>
+                    <div class="recent-date">29-july-2026</div>
+                    <h4>How to Book the PTE Exam Online? </h4>
+                  </div>
+                </div>
+                <div class="recent-post-wrapper">
+                  <div class="img-wrapper">
+                    <img src="assets/images/home/why-choose-us.jpg" alt="">
+                  </div>
+                  <div>
+                    <div class="recent-date">29-july-2026</div>
+                    <h4>How to Book the PTE Exam Online? </h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div>
+
+            </div>
+
+          </aside>
+        </div>
+      </div>
+
+
+    </div>
+  </section>
+
+  <!-- WhatsApp Float Button -->
+  <a href="https://wa.me/917428563177" class="whatsapp-float" target="_blank" aria-label="WhatsApp Support">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- Footer (Consistent with index.html) -->
+  <footer class="site-footer" id="site-footer">
+    <div class="footer-main">
+      <div class="container">
+        <div class="row g-5">
+          <!-- Quick Links -->
+          <div class="col-lg-2 col-md-6 col-6">
+            <h5 class="footer-col-title">Quick Links</h5>
+            <ul class="footer-nav-list" id="footer-quick-links">
+              <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+              <li><a href="about.html"><i class="fas fa-chevron-right"></i> About Us</a></li>
+              <li><a href="vouchers.html"><i class="fas fa-chevron-right"></i> Vouchers</a></li>
+              <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact Us</a></li>
+            </ul>
+          </div>
+
+          <!-- Exam Categories -->
+          <div class="col-lg-3 col-md-6 col-6">
+            <h5 class="footer-col-title">Exam Categories</h5>
+            <ul class="footer-nav-list" id="footer-categories">
+              <li><a href="exam-voucher-detail.html?exam=pte"><i class="fas fa-chevron-right"></i> PTE Voucher</a></li>
+              <li><a href="exam-voucher-detail.html?exam=gre"><i class="fas fa-chevron-right"></i> GRE Voucher</a></li>
+              <li><a href="exam-voucher-detail.html?exam=toefl"><i class="fas fa-chevron-right"></i> TOEFL Voucher</a>
+              </li>
+              <li><a href="exam-voucher-detail.html?exam=duolingo"><i class="fas fa-chevron-right"></i> Duolingo
+                  Voucher</a></li>
+            </ul>
+          </div>
+
+          <!-- Contact Info -->
+          <div class="col-lg-3 col-md-6">
+            <h5 class="footer-col-title">Get in Touch</h5>
+            <ul class="footer-contact-list" id="footer-contact-info">
+              <li>
+                <div class="footer-contact-icon"><i class="fas fa-envelope"></i></div>
+                <div>
+                  <span class="footer-contact-label">Email Us</span>
+                  <a href="mailto:info@voucherinfinity.com">info@voucherinfinity.com</a>
+                </div>
+              </li>
+              <li>
+                <div class="footer-contact-icon"><i class="fas fa-phone-alt"></i></div>
+                <div>
+                  <span class="footer-contact-label">Call Us</span>
+                  <a href="tel:+917838432984">+91-7838432984</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Social Media -->
+          <div class="col-lg-4 col-md-6">
+            <h5 class="footer-col-title">Social Media</h5>
+            <div class="footer-brand-block">
+              <div class="footer-social-links">
+                <a href="#" class="footer-social-link" aria-label="Facebook">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#" class="footer-social-link" aria-label="Instagram">
+                  <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#" class="footer-social-link" aria-label="LinkedIn">
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="footer-bottom-bar">
+      <div class="container">
+        <div class="row align-items-center g-3">
+          <div class="col-md-6 text-center text-md-start">
+            <p class="footer-copyright mb-0">&copy; 2026 <strong>Voucher Infinity</strong>. All Rights Reserved.</p>
+          </div>
+          <div class="col-md-6 text-center text-md-end">
+            <div class="footer-legal-links" id="footer-legal-links">
+              <a href="#">Privacy Policy</a>
+              <span class="footer-legal-sep">|</span>
+              <a href="#">Terms of Service</a>
+              <span class="footer-legal-sep">|</span>
+              <a href="#">Disclaimer</a>
+              <span class="footer-legal-sep">|</span>
+              <a href="#">Refund Policy</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <script>
+    // Blog database
+    const BLOG_POSTS = [
+      {
+        id: 1,
+        title: "How to Prepare for the PTE Academic Exam in 30 Days: A Complete Study Plan",
+        excerpt: "Preparing for the PTE Academic can be challenging, but a structured 30-day study plan can make all the difference. Discover the best tools, practice techniques, and tips to score 79+.",
+        author: "Dr. Sarah Miller",
+        date: "July 12, 2026",
+        readTime: "6 min read",
+        category: "Exam Tips",
+        image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?q=80&w=800&auto=format&fit=crop",
+        promoExam: "pte",
+        content: `
+          <h2>Introduction</h2>
+          <p>Entering the PTE Academic test center without a solid preparation blueprint is a recipe for anxiety. Squeezing your study regimen into exactly 30 days is absolutely possible, provided you follow a structured and highly focused workflow. This guide breaks down the preparation plan into clear weekly milestones to help you score 79+ on your first attempt.</p>
+          
+          <blockquote>"Consistency beats intensity. Studying 2 hours daily for 30 days is infinitely more effective than pulling 14-hour study sessions in the last week."</blockquote>
+          
+          <h2>Week 1: Master the Exam Format & Scoring Engine</h2>
+          <p>The PTE Academic is entirely computer-based and scored by artificial intelligence algorithms. Understanding the scoring rules is key to success:</p>
+          <ul>
+            <li><strong>Know the sections:</strong> Speaking & Writing (54-67 minutes), Reading (29-30 minutes), and Listening (30-43 minutes).</li>
+            <li><strong>Analyze item types:</strong> Learn the difference between integrated scoring items (e.g., Read Aloud affects both Speaking and Reading) and single-skill items.</li>
+            <li><strong>Set a baseline:</strong> Take an official mock test on day 2 to diagnose your weak spots.</li>
+          </ul>
+
+          <div class="tip-callout-box">
+            <h5>Pro Tip for Speaking</h5>
+            <p>The Pearson AI scoring engine values oral fluency and pronunciation over complex sentence structure. Speak at a natural, steady pace without hesitating or correcting your mistakes. Maintain your flow even if you stumble!</p>
+          </div>
+
+          <h2>Week 2 & 3: Section-by-Section Practice & Templates</h2>
+          <p>Focus your energy on high-weightage question types. Use proven templates for the Writing and Speaking tasks:</p>
+          <h3>1. Speaking: Describe Image & Retell Lecture</h3>
+          <p>Instead of thinking on your feet, memorize a structured sentence template. Fill in the template using keywords you see in the chart or hear in the audio file. This guarantees perfect oral fluency and vocabulary scores.</p>
+          
+          <h3>2. Writing: Write Essay & Summarize Written Text</h3>
+          <p>PTE essays are scored on grammatical correctness and spelling, not on unique ideas. Stick to a standard 4-paragraph layout structure and insert keywords related to the prompt topic to boost your content score.</p>
+
+          <h2>Week 4: Full-Length Mocks & Time Management</h2>
+          <p>In the final week, transition from topic practice to real-time exam simulation:</p>
+          <ol>
+            <li>Take at least 3 full-length scored mock tests under strict exam conditions.</li>
+            <li>Practice managing your time in the Reading section, where time is shared across multiple question types.</li>
+            <li>Review all spelling mistakes and dictation answers. Write From Dictation is the single most important task in the Listening section.</li>
+          </ol>
+
+          <h2>Final Preparation Checklist</h2>
+          <p>Ensure you have your passport and booking confirmation ticket ready. Get adequate sleep before your test day and arrive at least 30 minutes early. Remember: speak clearly into the microphone and keep your pacing consistent!</p>
+        `
+      },
+      {
+        id: 2,
+        title: "Understanding GRE Voucher Codes: How Much Can You Actually Save?",
+        excerpt: "GRE General Test vouchers are a great way to reduce your exam fees. Learn how these official ETS voucher codes work, where to buy them safely, and how to redeem them.",
+        author: "Rahul Sharma",
+        date: "July 08, 2026",
+        readTime: "5 min read",
+        category: "Vouchers",
+        image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=800&auto=format&fit=crop",
+        promoExam: "gre",
+        content: `
+          <h2>What is a GRE Exam Voucher?</h2>
+          <p>A GRE Exam Voucher is a 12-character promotional voucher code issued by ETS partners. When entering this voucher code at checkout on the official registration page, it covers the registration fee completely, reducing your cart balance to zero and saving you money instantly.</p>
+
+          <h2>Why Use a GRE Voucher instead of Direct Payment?</h2>
+          <p>Booking directly with credit cards on the ETS website can incur extra international exchange fees. Sourcing an official discount voucher through partners like Voucher Infinity provides double benefits:</p>
+          <ul>
+            <li><strong>Direct Savings:</strong> Save up to ₹2,000 off the standard retail test booking price.</li>
+            <li><strong>Convenient Booking:</strong> Pay locally using UPI, debit cards, or Net Banking in India without foreign transaction markups.</li>
+            <li><strong>Validity Window:</strong> Vouchers remain active for 1 full year, giving you flexibility in scheduling your exam.</li>
+          </ul>
+
+          <div class="tip-callout-box">
+            <h5>Is my voucher genuine?</h5>
+            <p>Always verify that you are buying from a certified partner. Genuine vouchers will be verified by the ETS registration system and will apply instantly to your cart before you finalize your booking.</p>
+          </div>
+
+          <h2>How to Book Your GRE Exam with a Voucher</h2>
+          <p>Applying your promo code is simple:</p>
+          <ol>
+            <li>Create or log into your account on the official ETS GRE website.</li>
+            <li>Select your preferred exam location (Test Center or Home Edition) and choose your date/time slot.</li>
+            <li>Proceed to the payment checkout page.</li>
+            <li>Paste your 12-character code into the 'Voucher / Promotional Code' field and click apply. Your balance will instantly reflect the discounted rate.</li>
+          </ol>
+        `
+      },
+      {
+        id: 3,
+        title: "Duolingo English Test vs TOEFL vs IELTS: Which One Should You Take?",
+        excerpt: "Choosing the right English proficiency exam is crucial for your university application. We compare Duolingo, TOEFL, and IELTS on cost, difficulty, format, and acceptance.",
+        author: "Emma Watson",
+        date: "June 28, 2026",
+        readTime: "8 min read",
+        category: "Guides",
+        image: "https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?q=80&w=800&auto=format&fit=crop",
+        promoExam: "duolingo",
+        content: `
+          <h2>The English Exam Decision</h2>
+          <p>Choosing between Duolingo (DET), TOEFL iBT, and IELTS Academic is one of the first decisions you'll make when planning your studies abroad. Understanding how they compare structurally and financially will help you choose the best fit.</p>
+
+          <h2>Direct Comparison Table</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Feature</th>
+                <th>IELTS Academic</th>
+                <th>TOEFL iBT</th>
+                <th>Duolingo (DET)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Standard Fee</strong></td>
+                <td>₹17,250</td>
+                <td>₹16,900</td>
+                <td>₹5,900</td>
+              </tr>
+              <tr>
+                <td><strong>Duration</strong></td>
+                <td>2 Hours 45 Minutes</td>
+                <td>2 Hours</td>
+                <td>1 Hour</td>
+              </tr>
+              <tr>
+                <td><strong>Exam Format</strong></td>
+                <td>Paper or Computer at Center</td>
+                <td>Computer at Center or Home</td>
+                <td>100% Online from Home</td>
+              </tr>
+              <tr>
+                <td><strong>Score Release</strong></td>
+                <td>3-5 Days (Computer)</td>
+                <td>4-8 Days</td>
+                <td>48 Hours</td>
+              </tr>
+              <tr>
+                <td><strong>Acceptance</strong></td>
+                <td>Global (Strong in UK/Aus/Canada)</td>
+                <td>Global (Preferred in US)</td>
+                <td>4,000+ programs (US/Canada)</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h2>1. IELTS: The Traditional Gold Standard</h2>
+          <p>IELTS is the most widely recognized exam for migration and global education. If you prefer a human-to-human interview for the speaking section, the paper-based or computer-delivered IELTS is your best option.</p>
+
+          <h2>2. TOEFL: Academic Precision</h2>
+          <p>TOEFL is a academic, computer-delivered test preferred by US universities. The speaking section requires recording responses through a microphone. It is highly structured and requires solid time-management skills.</p>
+
+          <h2>3. Duolingo English Test (DET): The Modern & Affordable Choice</h2>
+          <p>DET is a 1-hour computer-adaptive test taken entirely at home. It is significantly cheaper than IELTS/TOEFL and offers rapid score delivery. However, check your target universities' acceptance lists before booking.</p>
+        `
+      },
+      {
+        id: 4,
+        title: "Top 5 Mistakes to Avoid in TOEFL iBT Speaking Section",
+        excerpt: "Don't let simple slip-ups lower your TOEFL speaking score. Learn the top 5 mistakes students make and how to answer each prompt confidently.",
+        author: "David Clark",
+        date: "June 15, 2026",
+        readTime: "4 min read",
+        category: "Exam Tips",
+        image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=800&auto=format&fit=crop",
+        promoExam: "toefl",
+        content: `
+          <h2>TOEFL Speaking Mistakes</h2>
+          <p>The TOEFL speaking section is notoriously tricky. Speaking into a headset in a room full of other test takers can easily cause focus slips. Here are the top 5 mistakes students make and how to avoid them.</p>
+
+          <h3>Mistake 1: Remaining Silent When Stuck</h3>
+          <p>Long pauses (more than 3 seconds) heavily damage your scoring rate. If you forget a word, use fillers or paraphrases (e.g., 'What I mean to say is...', 'Furthermore...'). Keep speaking to maintain your delivery score.</p>
+
+          <h3>Mistake 2: Poor Time Management</h3>
+          <p>Each speaking task has a 45 or 60-second limit. Many candidates spend too much time summarizing the prompt and run out of time to state their own points. Allocate 15 seconds for introduction, and the rest for details.</p>
+
+          <div class="tip-callout-box">
+            <h5>Microphone Tip</h5>
+            <p>Ensure the microphone is placed 2-3 inches away from your mouth, slightly below your chin, to prevent breathing sounds from interfering with your audio quality.</p>
+          </div>
+
+          <h3>Mistake 3: Over-complicating Grammar</h3>
+          <p>Using overly complex vocabulary or complex grammar patterns can lead to mistakes. Stick to simple, clear, and logically sound sentences. Clarity of speech is much more important.</p>
+
+          <h3>Mistake 4: Not Sourcing Content from Reading/Listening Clips</h3>
+          <p>In Integrated Tasks, your score depends on summarizing the reading and listening arguments. Make sure to take quick bullet notes during the preparation phase and refer directly to them.</p>
+        `
+      }
+    ];
+
+    // Voucher details for Sidebar promo
+    const PROMO_VOUCHERS = {
+      pte: { title: "PTE Academic Voucher", was: "₹17,000", now: "₹14,500", link: "exam-voucher-detail.html?exam=pte" },
+      gre: { title: "GRE General Voucher", was: "₹22,500", now: "₹20,500", link: "exam-voucher-detail.html?exam=gre" },
+      toefl: { title: "TOEFL iBT Voucher", was: "₹16,900", now: "₹15,000", link: "exam-voucher-detail.html?exam=toefl" },
+      ielts: { title: "IELTS Booking Assistance", was: "₹17,250", now: "₹16,200", link: "exam-voucher-detail.html?exam=ielts" },
+      duolingo: { title: "Duolingo DET Voucher", was: "₹5,900", now: "₹4,900", link: "exam-voucher-detail.html?exam=duolingo" }
+    };
+
+    // Client-side initialization
+    document.addEventListener("DOMContentLoaded", () => {
+      // Initialize AOS
+      AOS.init({
+        duration: 800,
+        easing: "slide",
+        once: true,
+        offset: 50,
+      });
+
+      // Sticky Navbar Effect
+    })
+  </script>
+</body>
+
+</html>

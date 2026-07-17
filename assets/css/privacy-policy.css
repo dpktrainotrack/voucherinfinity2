@@ -1,0 +1,220 @@
+.privacy-hero {
+    position: relative;
+    padding: 110px 0 80px;
+    overflow: hidden;
+    color: #fff;
+    background: linear-gradient(115deg, #241833, #5c3668 65%, #a282ee);
+    isolation: isolate;
+}
+
+.privacy-hero::before,
+.privacy-hero::after {
+    content: '';
+    position: absolute;
+    border: 1px solid rgba(255, 255, 255, .15);
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.privacy-hero::before {
+    width: 410px;
+    height: 410px;
+    top: -235px;
+    right: 8%;
+}
+
+.privacy-hero::after {
+    width: 290px;
+    height: 290px;
+    bottom: -200px;
+    left: 4%;
+}
+
+.privacy-kicker {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 13px;
+    border-radius: 99px;
+    background: rgba(255, 255, 255, .12);
+    border: 1px solid rgba(255, 255, 255, .2);
+    font-size: .78rem;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    font-weight: 700;
+}
+
+.privacy-hero h1 {
+    color: #fff;
+    font-size: clamp(2.35rem, 5vw, 4rem);
+    margin: 18px 0 12px;
+}
+
+.privacy-hero p {
+    color: rgba(255, 255, 255, .78);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.policy-shell {
+    padding: 76px 0 96px;
+    background: #f6f5fa;
+}
+
+.policy-layout {
+    display: grid;
+    grid-template-columns: 255px minmax(0, 1fr);
+    gap: 34px;
+    align-items: start;
+}
+
+.policy-nav {
+    position: sticky;
+    top: 24px;
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #e9e5ef;
+    border-radius: 18px;
+    box-shadow: 0 8px 26px rgba(34, 24, 51, .05);
+}
+
+.policy-nav h2 {
+    font-size: .86rem;
+    letter-spacing: .08em;
+    color: #6c5a78;
+    text-transform: uppercase;
+    margin: 0 0 12px;
+}
+
+.policy-nav a {
+    display: block;
+    padding: 9px 10px;
+    border-radius: 8px;
+    color: #657080;
+    font-size: .88rem;
+    font-weight: 500;
+}
+
+.policy-nav a:hover {
+    color: var(--secondary-color);
+    background: #f2eff8;
+}
+
+.policy-content {
+    padding: clamp(26px, 5vw, 54px);
+    background: #fff;
+    border: 1px solid #e9e5ef;
+    border-radius: 22px;
+    box-shadow: 0 12px 34px rgba(34, 24, 51, .06);
+}
+
+.policy-note {
+    display: flex;
+    gap: 13px;
+    align-items: flex-start;
+    padding: 17px;
+    margin-bottom: 40px;
+    background: #f4f0fb;
+    border-left: 3px solid var(--primary-color);
+    border-radius: 10px;
+    color: #586273;
+    font-size: .93rem;
+    line-height: 1.65;
+}
+
+.policy-note i {
+    color: var(--secondary-color);
+    margin-top: 4px;
+}
+
+.policy-section {
+    scroll-margin-top: 32px;
+    padding-bottom: 32px;
+    margin-bottom: 32px;
+    border-bottom: 1px solid #eceaf0;
+}
+
+.policy-section:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+.policy-section h2 {
+    font-size: clamp(1.35rem, 2.5vw, 1.7rem);
+    margin-bottom: 14px;
+    color: var(--dark-color);
+}
+
+.policy-section p,
+.policy-section li {
+    color: #657080;
+    line-height: 1.75;
+}
+
+.policy-section p:last-child {
+    margin-bottom: 0;
+}
+
+.policy-section ul {
+    padding-left: 20px;
+    margin-bottom: 0;
+}
+
+.policy-section li+li {
+    margin-top: 7px;
+}
+
+.policy-section a {
+    color: var(--secondary-color);
+    font-weight: 600;
+}
+
+.contact-panel {
+    padding: 22px;
+    border-radius: 14px;
+    background: linear-gradient(135deg, #5c3668, #7f5b91);
+    color: #fff;
+}
+
+.contact-panel h3 {
+    color: #fff;
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+}
+
+.contact-panel p {
+    color: rgba(255, 255, 255, .75);
+    margin-bottom: 14px;
+}
+
+.contact-panel a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #fff;
+    font-weight: 700;
+}
+
+@media (max-width: 991px) {
+    .policy-shell {
+        padding: 55px 0 70px;
+    }
+
+    .policy-layout {
+        display: block;
+    }
+
+    .policy-nav {
+        position: static;
+        margin-bottom: 22px;
+    }
+
+    .policy-nav a {
+        display: inline-block;
+    }
+}
+
+.footer-main {
+    padding-top: 55px;
+}

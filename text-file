@@ -1,0 +1,91 @@
+<section class="hero-section p-0">
+  <div class="hero-carousel owl-carousel owl-theme">
+    <div class="hero-slide"
+      style="background-image: url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=1920&auto=format&fit=crop');">
+      <div class="hero-overlay"></div>
+      <div class="container h-100" style="position: relative; z-index: 2;">
+        <div class="row h-100 align-items-center">
+          <div class="col-lg-10 mx-auto text-center hero-content">
+            <h1 class="text-white">Get Discounted
+              <span>PTE Exam Voucher</span>
+            </h1>
+            <p class="text-white">Book your exam today and save big with instant delivery.</p>
+            <div class="d-flex justify-content-center">
+              <a href="#vouchers" class="btn btn-primary-custom">Browse Vouchers</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-slide"
+      style="background-image: url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1920&auto=format&fit=crop');">
+      <div class="hero-overlay"></div>
+      <div class="container h-100" style="position: relative; z-index: 2;">
+        <div class="row h-100 align-items-center">
+          <div class="col-lg-10 mx-auto text-center hero-content">
+            <h1 class="text-white">Looking for <span>PSI SFE Exam Voucher (UKVI)</span></h1>
+            <p class="text-white">10% off on PSI SFE Exam Vouchers. Limited Time Offer.</p>
+            <div class="d-flex justify-content-center">
+              <a href="#vouchers" class="btn btn-primary-custom">Get Voucher</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-slide"
+      style="background-image: url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=1920&auto=format&fit=crop');">
+      <div class="hero-overlay"></div>
+      <div class="container h-100" style="position: relative; z-index: 2;">
+        <div class="row h-100 align-items-center">
+          <div class="col-lg-10 mx-auto text-center hero-content">
+            <h1 class="text-white">Get Discounted <span>TOEFL Exam Voucher</span></h1>
+            <p class="text-white">10% off on TOEFL Exam Vouchers. Limited Time Offer.</p>
+            <div class="d-flex justify-content-center">
+              <a href="exam-vouchers.html" class="btn btn-primary-custom">Get Voucher</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+<div class="how-it-works-wrapper p-4 p-md-5 bg-white rounded-4 shadow-lg" data-aos="zoom-in" data-aos-delay="200">
+  <h3 class="  mb-4 text-center">How It Works</h3>
+
+  <div class="step-modern d-flex mb-4" data-aos="fade-left" data-aos-delay="300">
+    <div class="step-number me-3 shadow-sm">1</div>
+    <div>
+      <h5 class="  mb-1">Select Voucher</h5>
+      <p class="text-muted small mb-0">Choose your required exam voucher from our list.</p>
+    </div>
+  </div>
+
+  <div class="step-modern d-flex mb-4" data-aos="fade-left" data-aos-delay="400">
+    <div class="step-number me-3 shadow-sm">2</div>
+    <div>
+      <h5 class="  mb-1">Make Payment</h5>
+      <p class="text-muted small mb-0">Pay securely using UPI, Card, or Net Banking.</p>
+    </div>
+  </div>
+
+  <div class="step-modern d-flex mb-4" data-aos="fade-left" data-aos-delay="500">
+    <div class="step-number me-3 shadow-sm">3</div>
+    <div>
+      <h5 class="  mb-1">Get Email</h5>
+      <p class="text-muted small mb-0">Receive your voucher code instantly via email.</p>
+    </div>
+  </div>
+
+  <div class="step-modern d-flex" data-aos="fade-left" data-aos-delay="600">
+    <div class="step-number me-3 shadow-sm">4</div>
+    <div>
+      <h5 class="  mb-1">Book Exam</h5>
+      <p class="text-muted small mb-0">Use the code to book your exam on the official site.</p>
+    </div>
+  </div>
+
+</div>

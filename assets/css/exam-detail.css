@@ -1,0 +1,961 @@
+/* ==========================================================================
+   EXAM VOUCHER DETAIL PAGE STYLES
+   Tailored to integrate with Voucher Infinity's core branding styles.
+   ========================================================================== */
+
+/* ---------- Page Layout ---------- */
+.exam-detail-page {
+    background-color: #FAFBFC;
+}
+
+/* Header Spacer */
+.detail-hero-section {
+    padding: 60px 0;
+    position: relative;
+    overflow: hidden;
+
+}
+
+
+
+.breadcrumb-custom {
+    font-size: 0.9rem;
+
+    opacity: 0.8;
+}
+
+.breadcrumb-custom a {
+    color: #fff;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.breadcrumb-custom a:hover {
+    color: var(--primary-color);
+}
+
+.breadcrumb-custom span {
+    margin: 0 10px;
+
+}
+
+.badge-exam {
+    display: inline-block;
+    padding: 6px 16px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    border-radius: 50px;
+    margin-bottom: 15px;
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+
+}
+
+.detail-hero-section h1 {
+    font-size: clamp(2rem, 4vw, 3.25rem);
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    margin-bottom: 20px;
+
+}
+
+.detail-hero-section .lead-text {
+    font-size: 1.15rem;
+    color: rgba(255, 255, 255, 0.85);
+    margin-bottom: 30px;
+
+}
+
+/* ---------- Price Card Container ---------- */
+.price-display-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    /* margin-bottom: 30px; */
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 15px 25px;
+    border-radius: 12px;
+    width: fit-content;
+    backdrop-filter: blur(10px);
+}
+
+.price-now {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: #fff;
+}
+
+.price-was {
+    font-size: 1.25rem;
+    color: rgba(255, 255, 255, 0.5);
+    text-decoration: line-through;
+}
+
+.badge-save {
+    background: #00E676;
+    color: #0c2b4b;
+    font-size: 0.8rem;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 6px;
+    text-transform: uppercase;
+}
+
+/* ---------- Interactive 3D Voucher Card ---------- */
+.card-perspective-container {
+    perspective: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.voucher-card-interactive {
+    width: 100%;
+    max-width: 320px;
+    /* height: 250px; */
+    position: relative;
+    border-radius: 20px;
+    padding: 25px;
+    color: #ffffffd5;
+    transform-style: preserve-3d;
+    transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1), box-shadow 0.6s;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.voucher-card-interactive::before {
+    width: 60px;
+    height: 60px;
+    border-radius: 80px;
+    background-color: #cfbb96;
+    top: 50%;
+    transform: translatey(-50%);
+    left: -40px;
+    content: "";
+    position: absolute;
+}
+
+.voucher-card-interactive:hover {
+    transform: rotateY(12deg) rotateX(8deg) translateY(-5px);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+}
+
+/* Card Glow Overlay */
+.voucher-card-interactive::after {
+    width: 60px;
+    height: 60px;
+    border-radius: 80px;
+    background-color: #0c2c54;
+    top: 50%;
+    transform: translatey(-50%);
+    right: -40px;
+    content: "";
+    position: absolute;
+}
+
+/* Voucher Brands Backgrounds */
+.voucher-card-interactive.pte-theme {
+    /* background: linear-gradient(135deg, #009688 0%, #5c3668 100%); */
+    box-shadow: 0 20px 45px rgba(0, 150, 136, 0.25);
+    background-color: rgba(255, 255, 255, 0.76);
+}
+
+.voucher-card-interactive img {
+    width: 100%;
+    object-fit: none;
+}
+
+/* .voucher-card-interactive.gre-theme {
+    background: linear-gradient(135deg, #1565C0 0%, #0D47A1 60%, #E65100 100%);
+    box-shadow: 0 20px 45px rgba(21, 101, 192, 0.25);
+}
+
+.voucher-card-interactive.toefl-theme {
+    background: linear-gradient(135deg, #0D47A1 0%, #1565C0 50%, #78909C 100%);
+    box-shadow: 0 20px 45px rgba(13, 71, 161, 0.25);
+}
+
+.voucher-card-interactive.ielts-theme {
+    background: linear-gradient(135deg, #C62828 0%, #5c3668 100%);
+    box-shadow: 0 20px 45px rgba(198, 40, 40, 0.25);
+}
+
+.voucher-card-interactive.duolingo-theme {
+    background: linear-gradient(135deg, #4CAF50 0%, #2E7D32 60%, #FF9800 100%);
+    box-shadow: 0 20px 45px rgba(76, 175, 80, 0.25);
+} */
+
+/* Card Hologram & Chip */
+.card-top-elements {
+    display: flex;
+    /* justify-content: space-between; */
+    /* align-items: center; */
+    justify-content: center;
+    z-index: 2;
+}
+
+.card-brand-title {
+    font-family: var(--heading-font);
+    font-size: 1.45rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
+    /* color: var(--primary-color); */
+}
+
+.card-chip {
+    width: 42px;
+    height: 32px;
+    background: linear-gradient(135deg, #ffeb3b 0%, #f57f17 100%);
+    border-radius: 6px;
+    position: relative;
+    box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.5);
+}
+
+.card-chip::before {
+    content: "";
+    position: absolute;
+    inset: 4px;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 3px;
+}
+
+.hologram-strip {
+    position: absolute;
+    width: 60px;
+    top: 0;
+    bottom: 0;
+    right: 90px;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.65) 50%, rgba(255, 255, 255, 0) 100%);
+    transform: skewX(-20deg);
+    animation: shine 6s infinite ease-in-out;
+    animation-delay: 1s;
+    pointer-events: none;
+}
+
+@keyframes shine {
+    0% {
+        transform: translateX(-150px) skewX(-20deg);
+    }
+
+    30%,
+    100% {
+        transform: translateX(350px) skewX(-20deg);
+    }
+}
+
+.card-middle-elements {
+    z-index: 2;
+    margin: 15px 0;
+}
+
+.card-number-mockup {
+    font-family: monospace;
+    font-size: 1.25rem;
+    letter-spacing: 0.15em;
+    color: rgba(255, 255, 255, 0.95);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.card-bottom-elements {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    z-index: 2;
+}
+
+.card-holder {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-holder span {
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.6);
+    letter-spacing: 0.05em;
+}
+
+.card-holder strong {
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.barcode-mockup {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    opacity: 0.8;
+}
+
+.barcode-lines {
+    width: 80px;
+    height: 25px;
+    background: repeating-linear-gradient(90deg, #fff, #fff 2px, transparent 2px, transparent 5px);
+}
+
+.barcode-text {
+    font-size: 0.55rem;
+    font-family: monospace;
+    margin-top: 2px;
+    letter-spacing: 1px;
+}
+
+/* ---------- Trust Badges ---------- */
+.trust-badges-section {
+    padding: 20px 0;
+
+    /* box-shadow: 0 5px 15px rgba(0, 0, 0, 0.02);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05); */
+}
+
+.trust-badge-card {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 10px 15px;
+}
+
+.trust-badge-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--light-primary-color);
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+}
+
+.trust-badge-info h5 {
+    font-size: 0.95rem;
+    font-weight: 700;
+    margin-bottom: 2px;
+    color: var(--dark-color);
+}
+
+.trust-badge-info p {
+    font-size: 0.8rem;
+    color: #666;
+    margin-bottom: 0;
+}
+
+/* ---------- Main Info Section & Specifications ---------- */
+
+
+.info-content-card {
+    background: #fff;
+    border-radius: var(--border-radius-md);
+    padding: 40px;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.specifications-table {
+    margin-top: 25px;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.specifications-table table {
+    margin-bottom: 0;
+}
+
+.specifications-table th {
+    background-color: #f8f9fa;
+    color: var(--dark-color);
+    font-weight: 600;
+}
+
+.specifications-table td,
+.specifications-table th {
+    padding: 15px 20px;
+    font-size: 0.95rem;
+}
+
+/* ---------- Timeline (How It Works) ---------- */
+
+
+.timeline-flow {
+    position: relative;
+    margin-top: 50px;
+}
+
+.timeline-flow::before {
+    content: "";
+    position: absolute;
+    top: 30px;
+    left: 20px;
+    bottom: 30px;
+    width: 2px;
+    background: linear-gradient(to bottom, var(--primary-color), var(--secondary-color));
+}
+
+@media (min-width: 768px) {
+    .timeline-flow::before {
+        left: 50%;
+        transform: translateX(-50%);
+        top: 40px;
+        bottom: 40px;
+    }
+}
+
+.timeline-step {
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.timeline-step:last-child {
+    margin-bottom: 0;
+}
+
+.timeline-badge {
+    position: absolute;
+    left: 0;
+    top: 10px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--primary-gradient);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.1rem;
+    z-index: 2;
+    box-shadow: 0 0 0 8px rgba(162, 130, 238, 0.15);
+}
+
+@media (min-width: 768px) {
+    .timeline-badge {
+        left: 50%;
+        transform: translateX(-50%);
+        top: 20px;
+        width: 50px;
+        height: 50px;
+        font-size: 1.25rem;
+    }
+}
+
+.timeline-panel {
+    width: 100%;
+    padding-left: 60px;
+}
+
+@media (min-width: 768px) {
+    .timeline-panel {
+        width: 45%;
+        padding-left: 0;
+    }
+
+    .timeline-step:nth-child(even) .timeline-panel {
+        margin-left: 55%;
+        padding-left: 30px;
+        text-align: left;
+    }
+
+    .timeline-step:nth-child(odd) .timeline-panel {
+        text-align: right;
+        padding-right: 30px;
+    }
+}
+
+.timeline-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid rgba(0, 0, 0, 0.04);
+    transition: var(--transition);
+}
+
+.timeline-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+}
+
+.timeline-card h4 {
+    font-size: 1.15rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.timeline-card p {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 0;
+    line-height: 1.6;
+}
+
+/* ---------- FAQ Section ---------- */
+
+
+.faq-accordion .accordion-item {
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    border-radius: 12px !important;
+    margin-bottom: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.01);
+}
+
+.faq-accordion .accordion-button {
+    padding: 20px;
+    font-weight: 600;
+    font-family: var(--heading-font);
+    color: var(--dark-color);
+    background-color: #fff;
+    box-shadow: none;
+}
+
+.faq-accordion .accordion-button:not(.collapsed) {
+    background-color: var(--light-primary-color);
+    color: var(--secondary-color);
+}
+
+.faq-accordion .accordion-button::after {
+    background-size: 1.1rem;
+}
+
+.faq-accordion .accordion-body {
+    padding: 20px;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: #555;
+    background-color: #fff;
+    border-top: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+/* ---------- Enquiry Form Card ---------- */
+.enquiry-card-wrapper {
+    position: sticky;
+    top: 110px;
+}
+
+.enquiry-form-card {
+    background: #fff;
+    border-radius: var(--border-radius-md);
+    padding: 35px;
+    box-shadow: var(--shadow-md);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.enquiry-form-card h3 {
+    font-size: 1.45rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: var(--dark-color);
+}
+
+.enquiry-form-card p {
+    font-size: 0.88rem;
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.form-floating>.form-control:focus,
+.form-floating>.form-select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.25rem rgba(162, 130, 238, 0.2);
+}
+
+
+
+.btn-submit-enquiry:hover {
+    box-shadow: 0 5px 15px rgba(162, 130, 238, 0.4);
+    transform: translateY(-2px);
+    color: #fff;
+    background-color: var(--primary-color);
+}
+
+.whatsapp-direct-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: #25D366;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 20px;
+    font-weight: 600;
+    transition: var(--transition);
+    width: 100%;
+    margin-top: 10px;
+    text-decoration: none;
+}
+
+.whatsapp-direct-btn:hover {
+    background-color: #128C7E;
+    box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3);
+    transform: translateY(-2px);
+    color: white;
+}
+
+/* Call-out Box */
+.support-notice-box {
+    margin-top: 25px;
+    padding: 15px;
+    background-color: rgba(12, 43, 75, 0.02);
+    border-left: 3px solid var(--secondary-color);
+    border-radius: 0 8px 8px 0;
+    font-size: 0.82rem;
+    color: #555;
+}
+
+.support-notice-box i {
+    color: var(--secondary-color);
+    margin-right: 5px;
+}
+
+/* CTA buttons inside hero */
+.detail-hero-cta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    max-width: 260px;
+
+}
+
+.btn-hero-primary {
+    background-color: #fff;
+    color: var(--secondary-color);
+    border: none;
+    font-weight: 700;
+    padding: 12px 30px;
+    border-radius: 8px;
+    transition: var(--transition);
+    border: solid 1px var(--secondary-color);
+}
+
+.btn-hero-primary:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+}
+
+.btn-hero-secondary {
+    background-color: rgba(255, 255, 255, 0.15);
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    font-weight: 600;
+    padding: 12px 30px;
+    border-radius: 8px;
+    transition: var(--transition);
+}
+
+.btn-hero-secondary:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+.breadcrumb-custom {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    color: #7a899e;
+
+    font-size: .83rem;
+    font-weight: 600;
+
+}
+
+.breadcrumb-custom a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+
+
+.detail-hero-section .lead-text {
+
+    color: #53657d;
+    font-size: 1.05rem;
+    line-height: 1.75;
+}
+
+.price-display-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 14px;
+    /* margin: 30px 0; */
+}
+
+.price-now {
+    color: var(--dark-color);
+    font-family: Poppins, sans-serif;
+    font-size: 2.5rem;
+    font-weight: 800;
+    letter-spacing: -.05em;
+}
+
+.price-was {
+    margin-left: 10px;
+    color: #8592a4;
+    font-size: 1rem;
+    text-decoration-thickness: 1.5px;
+}
+
+.btn-hero-secondary {
+    border: 1px solid #bfd0dc;
+    background: rgba(255, 255, 255, .72);
+    color: var(--dark-color);
+}
+
+.card-perspective-container {
+    padding: 15px;
+}
+
+
+
+
+
+.text-secondary-custom {
+    color: var(--primary-color) !important;
+    font-size: 1.05rem;
+    font-weight: 800;
+}
+
+.leading-relaxed {
+    color: var(--light-color) !important;
+    line-height: 1.82;
+}
+
+.specifications-table {
+    overflow: hidden;
+    border: 1px solid var(--line);
+    border-radius: 11px;
+}
+
+.specifications-table .table {
+    margin: 0;
+}
+
+.specifications-table thead th {
+    padding: .92rem 1rem;
+    border: 0;
+    background: #eaf4f7;
+    color: var(--dark-color);
+    font-size: .78rem;
+    letter-spacing: .045em;
+    text-transform: uppercase;
+}
+
+.specifications-table tbody td {
+    padding: 1rem;
+    border-color: rgb(226, 225, 225);
+    color: var(--light-color);
+    font-size: .9rem;
+    vertical-align: middle;
+}
+
+.specifications-table tbody td:first-child {
+    width: 38%;
+    color: var(--light-color);
+}
+
+.enquiry-card-wrapper {
+    position: sticky;
+    top: 115px;
+    padding: 30px;
+    border-radius: 15px;
+    background-color: #ffffffde;
+    border: 1px solid rgb(192, 190, 190);
+}
+
+.enquiry-form-card {
+    padding: clamp(24px, 3vw, 34px);
+}
+
+.enquiry-form-card h3 {
+    color: var(--light-color);
+    font-family: Poppins, sans-serif;
+    font-size: 1.35rem;
+    font-weight: 700;
+}
+
+.enquiry-form-card>p {
+    color: var(--light-color);
+    font-size: .88rem;
+    line-height: 1.65;
+}
+
+.form-floating>.form-control,
+.form-floating>.form-select {
+    border-color: #d6e1eb;
+    border-radius: 9px;
+    color: var(--light-color);
+    font-size: .9rem;
+}
+
+.form-floating>.form-control:focus,
+.form-floating>.form-select:focus {
+    border-color: #69a6ba;
+    box-shadow: 0 0 0 .22rem rgba(23, 107, 135, .12);
+}
+
+.btn-submit-enquiry {
+    width: 100%;
+    border: 0;
+    border-radius: 9px;
+    padding: .9rem 1rem;
+    background: var(--secondary-color);
+    color: #fff;
+    font-size: .9rem;
+    font-weight: 800;
+}
+
+.whatsapp-direct-btn {
+    border-radius: 9px;
+    font-size: .87rem;
+    font-weight: 700;
+}
+
+.support-notice-box {
+    border-radius: 9px;
+    background: #f1f7fb;
+    color: #50657e;
+    font-size: .75rem;
+}
+
+
+
+.timeline-section .text-muted,
+.faq-section .text-muted {
+    color: var(--light-color) !important;
+}
+
+.timeline-flow::before {
+    background: #bfd7df;
+}
+
+.timeline-badge {
+    border: 4px solid #eaf3f7;
+    background: var(--primary-color);
+    box-shadow: 0 0 0 1px #a8cbd5;
+}
+
+.timeline-card {
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    background: #fff;
+    box-shadow: 0 12px 26px rgba(26, 66, 89, .07);
+}
+
+.timeline-card h4 {
+    font-size: 1rem;
+}
+
+.timeline-card p {
+    color: var(--light-color);
+    font-size: .88rem;
+    line-height: 1.65;
+}
+
+
+
+.faq-accordion .accordion-item {
+    margin-bottom: 12px;
+    overflow: hidden;
+    border: 1px solid var(--line);
+    border-radius: 12px !important;
+}
+
+.faq-accordion .accordion-button {
+    padding: 1.1rem 1.25rem;
+    color: var(--light-color);
+    background: #fff;
+    font-size: .95rem;
+    font-weight: 700;
+    box-shadow: none;
+}
+
+.faq-accordion .accordion-button:not(.collapsed) {
+    color: var(--dark-color);
+    background: #eff8f8;
+}
+
+.faq-accordion .accordion-button:focus {
+    box-shadow: none;
+}
+
+.faq-accordion .accordion-body {
+    color: var(--light-color);
+    line-height: 1.7;
+}
+
+.whatsapp-float {
+    right: 24px;
+    bottom: 24px;
+    width: 54px;
+    height: 54px;
+    box-shadow: 0 8px 22px rgba(14, 102, 63, .3);
+}
+
+@media (max-width: 991.98px) {
+    #mainNavbar {
+        top: 0;
+    }
+
+    .top-header {
+        display: none;
+    }
+
+
+
+    .trust-badges-section {
+        margin-top: 0;
+        padding-top: 20px;
+    }
+
+    .enquiry-card-wrapper {
+        position: static;
+    }
+}
+
+
+
+.detail-hero-section h1 {
+    font-size: 2.25rem;
+}
+
+.price-now {
+    font-size: 2.15rem;
+}
+
+.detail-hero-cta .btn {
+    width: 100%;
+}
+
+.info-section,
+.timeline-section,
+.faq-section {
+    padding: 58px 0;
+}
+
+
+.specifications-table tbody td {
+    padding: .85rem .7rem;
+    font-size: .8rem;
+}
+
+
+.detail-hero-section {
+    background-position: right;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
