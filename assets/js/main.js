@@ -36,24 +36,29 @@ document.addEventListener("DOMContentLoaded", () => {
       responsive: {
         0: { items: 1 },
         768: { items: 2 },
-        992: { items: 4 },
+        992: { items: 3 },
+        1200: { items: 4 },
       },
     });
   }
   if (jQuery && $(".testimonials-carousel").length) {
     $(".testimonials-carousel").owlCarousel({
       loop: true,
-      margin: 20,
-      nav: false,
+      fade: true,
+      margin: 10,
+      nav: true,
       dots: false,
-      autoplay: true,
+      autoplay: false,
       autoplayTimeout: 5000,
-      smartSpeed: 3000,
+      smartSpeed: 2000,
       center: true,
-
+      navText: [
+        '<i class="fas fa-chevron-left"></i>',
+        '<i class="fas fa-chevron-right"></i>',
+      ],
       responsive: {
         0: { items: 1 },
-        768: { items: 2 },
+        768: { items: 1, nav: false },
         992: { items: 2 },
       },
     });

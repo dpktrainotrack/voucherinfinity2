@@ -118,7 +118,7 @@ section:nth-child(even) {
 .btn-primary-custom-2:hover {
   background: white;
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px var(--secondary-color);
+  box-shadow: 0 1px 0 rgba(16, 36, 62, .08);
   color: var(--primary-color);
   transform: translateY(-2px);
 
@@ -170,9 +170,11 @@ section:nth-child(even) {
   /* backdrop-filter: blur(10px); */
 }
 
+
+
 .navbar.sticky {
-  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
-  padding: 10px 0;
+  box-shadow: 0 1px 0 rgba(16, 36, 62, .08);
+  /* padding: 10px 0; */
 }
 
 .navbar-brand {
@@ -268,8 +270,8 @@ section:nth-child(even) {
 }
 
 /* Owl Carousel Custom Nav & Dots */
-:is(.hero-carousel, .our-exam-vouchers) .owl-nav button.owl-prev,
-:is(.hero-carousel, .our-exam-vouchers) .owl-nav button.owl-next {
+:is(.hero-carousel, .our-exam-vouchers, .testimonials-carousel) .owl-nav button.owl-prev,
+:is(.hero-carousel, .our-exam-vouchers, .testimonials-carousel) .owl-nav button.owl-next {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -286,19 +288,61 @@ section:nth-child(even) {
   justify-content: center;
 }
 
-@media screen and (width >=1400px) {
-  .our-exam-vouchers .owl-nav button.owl-prev {
+
+
+
+
+
+
+@media screen and (width >=1200px) {
+
+  .our-exam-vouchers .owl-nav button.owl-prev,
+  .testimonials-carousel .owl-nav button.owl-prev {
     left: -40px;
+
   }
 
-  .our-exam-vouchers .owl-nav button.owl-next {
+  .our-exam-vouchers .owl-nav button.owl-next,
+  .testimonials-carousel .owl-nav button.owl-next {
     right: -40px;
+
   }
 }
 
+/* @media screen and (max-width: 991px) { */
 
 
-.our-exam-vouchers .owl-nav button:hover {
+.our-exam-vouchers .owl-nav button.owl-prev,
+.testimonials-carousel .owl-nav button.owl-prev {
+  display: none;
+}
+
+
+.our-exam-vouchers .owl-nav button.owl-next,
+.testimonials-carousel .owl-nav button.owl-next {
+  display: none;
+}
+
+/* } */
+
+/* .our-exam-vouchers .owl-nav button.owl-prev {
+  left: -40px !important;
+
+}
+
+.our-exam-vouchers .owl-nav button.owl-next {
+  right: -40px;
+
+} */
+
+
+
+
+
+
+
+.our-exam-vouchers .owl-nav button:hover,
+.testimonials-carousel .owl-nav button:hover {
   background: var(--primary-color) !important;
 }
 
@@ -1860,7 +1904,7 @@ section:nth-child(even) {
   color: #fff;
   font-family: var(--heading-font);
   font-size: 1.1rem;
-  font-weight: 700;
+  font-weight: 500;
   margin-bottom: 24px;
   position: relative;
   padding-bottom: 14px;
@@ -2134,10 +2178,17 @@ section:nth-child(even) {
 }
 
 /* About Intro Section Modern Styles */
-.about-image-wrapper {
-  /* padding-right: 20px; */
-  /* padding-bottom: 20px; */
+@media (min-width: 992px) {
+  .about-image-wrapper {
+    position: relative;
+    z-index: 1;
+  }
+
+  .about-image-wrapper img {
+    min-height: 460px;
+  }
 }
+
 
 .about-shape-bg {
   position: absolute;
@@ -2577,8 +2628,8 @@ section:nth-child(even) {
 #contactPopup {
   border: 0;
   padding: 0;
-  width: min(950px, 95vw);
-  max-width: 950px;
+  width: min(450px, 95vw);
+  /* max-width: 950px; */
   border-radius: var(--border-radius-lg);
   background: transparent;
   overflow: visible;
@@ -2608,7 +2659,7 @@ section:nth-child(even) {
   border: none;
   cursor: pointer;
   border-radius: 50%;
-  background: var(--light-primary-color);
+  background: var(--primary-color);
   color: var(--secondary-color);
   font-size: 18px;
   transition: var(--transition);
@@ -2621,14 +2672,15 @@ section:nth-child(even) {
 
 /* Layout */
 .popup-content {
-  display: grid;
-  grid-template-columns: 1fr 1.2fr;
-  min-height: 580px;
+  /* display: grid;
+  grid-template-columns: 1fr 1.2fr; */
+  /* min-height: 580px; */
+  /* max-width: 550px; */
 }
 
 /* Left Side */
 .popup-info {
-  padding: 60px;
+  padding: 30px;
   color: #fff;
   background: var(--primary-gradient);
   position: relative;
@@ -2669,14 +2721,32 @@ section:nth-child(even) {
 
 .popup-info h2 {
   font-family: var(--heading-font);
-  font-size: 42px;
+  font-size: 32px;
   line-height: 1.2;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.select-city {
+  position: relative;
+
+
+}
+
+.select-city::after {
+  content: "\f078";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
 }
 
 .popup-info p {
   opacity: .9;
-  margin-bottom: 30px;
+  margin-bottom: 0px;
   line-height: 1.8;
 }
 
@@ -2692,7 +2762,7 @@ section:nth-child(even) {
 
 /* Right Side Form */
 .popup-form {
-  padding: 60px;
+  padding: 30px;
   background: var(--theme-white);
   display: flex;
   flex-direction: column;
@@ -2704,6 +2774,18 @@ section:nth-child(even) {
 }
 
 .form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  border: 2px solid transparent;
+  background: var(--light-bg);
+  padding: 16px 20px;
+  font-size: 15px;
+  border-radius: var(--border-radius-sm);
+  font-family: var(--body-font);
+  transition: var(--transition);
+}
+
 .form-group textarea {
   width: 100%;
   border: 2px solid transparent;
@@ -2725,7 +2807,7 @@ section:nth-child(even) {
 
 .form-group textarea {
   resize: vertical;
-  min-height: 130px;
+
 }
 
 .submit-btn {
@@ -2776,7 +2858,7 @@ section:nth-child(even) {
   }
 
   .popup-info h2 {
-    font-size: 30px;
+    font-size: 10px;
   }
 
   .popup-form {

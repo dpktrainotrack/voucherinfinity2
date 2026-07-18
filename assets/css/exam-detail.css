@@ -136,7 +136,7 @@
     width: 60px;
     height: 60px;
     border-radius: 80px;
-    background-color: #cfbb96;
+    background-color: var(--primary-color);
     top: 50%;
     transform: translatey(-50%);
     left: -40px;
@@ -154,7 +154,7 @@
     width: 60px;
     height: 60px;
     border-radius: 80px;
-    background-color: #0c2c54;
+    background-color: var(--primary-color);
     top: 50%;
     transform: translatey(-50%);
     right: -40px;
@@ -725,9 +725,9 @@
 
 
 .text-secondary-custom {
-    color: var(--primary-color) !important;
+    color: darken(var(--secondary-color), 10%);
     font-size: 1.05rem;
-    font-weight: 800;
+    font-weight: 300;
 }
 
 .leading-relaxed {

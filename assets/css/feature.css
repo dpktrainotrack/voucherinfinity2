@@ -178,15 +178,17 @@
 }
 
 span.w-icon {
-    width: 150px;
-    height: 150px;
+    width: 80px;
+    height: 80px;
     margin: 0 auto;
     display: inline-block;
     border-radius: 100px;
     display: flex;
     align-items: center;
-    font-size: 50px;
+    font-size: 30px;
     justify-content: center;
+    border: 2px solid var(--primary-color);
+    background-color: var(--light-primary-color);
 }
 
 .work-box {
@@ -198,9 +200,14 @@ span.w-icon {
 span.arrow {
     font-size: 30px;
     position: absolute;
-    top: 70px;
+    top: 20px;
     right: 0;
-    color: #38a769;
+    color: var(--light-primary-color);
+    transition: all .3s ease;
+}
+
+.work-box:hover span.arrow {
+    color: var(--primary-color);
 }
 
 .study-ab-form {
@@ -209,20 +216,20 @@ span.arrow {
 }
 
 .light-green span.w-icon {
-    background-color: #e4f8ef;
-    color: #38a769;
+    /* background-color: #e4f8ef; */
+    color: var(--primary-color);
     margin-bottom: 20px;
 }
 
 .light-orange span.w-icon {
-    background-color: #f9eee8;
-    color: #fe8954;
+    /* background-color: #f9eee8; */
+    color: var(--primary-color);
     margin-bottom: 20px;
 }
 
 .work-box.light-blue span.w-icon {
-    background-color: #ebf4ff;
-    color: #155298;
+    /* background-color: #ebf4ff; */
+    color: var(--primary-color);
     margin-bottom: 20px;
 }
 
@@ -236,5 +243,5 @@ span.arrow {
 }
 
 span.arrow {
-    font-size: 30px;
+    font-size: 24px;
 }

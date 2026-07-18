@@ -141,7 +141,7 @@ a {
 
 .card:hover {
 
-    transform: translateY(-10px);
+
     box-shadow: var(--shadow-card);
 
 }
@@ -184,6 +184,24 @@ a {
 
     box-shadow: var(--shadow-sm);
 
+}
+
+article .content p {
+
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 3;
+}
+
+article .content h2 {
+
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 1;
 }
 
 .content {
@@ -304,5 +322,15 @@ a {
 .blog-btn {
     display: inline-block;
     color: var(--secondary-color);
-    font-weight: 600;
+    font-weight: 500;
+    padding: 8px 20px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    transition: var(--transition);
+    font-size: 0.9rem;
+}
+
+.blog-btn:hover {
+    background: var(--secondary-color);
+    color: #fff;
 }

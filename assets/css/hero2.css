@@ -120,7 +120,7 @@
     width: 100%;
     z-index: 1030;
     animation: slideDown 0.4s ease-in-out;
-    box-shadow: var(--shadow-md);
+    box-shadow: 0 1px 0 rgba(16, 36, 62, .08);
     padding: 10px 0;
     background-color: var(--light-bg);
 
@@ -707,6 +707,19 @@ nav.navbar {
     justify-content: center;
 }
 
+.hero-Enquiry-form {
+    position: relative;
+    z-index: 2;
+    background: rgba(255, 255, 255, 0.07);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 30px 70px rgba(0, 0, 0, 0.35), 0 0 0 1px rgba(255, 255, 255, 0.06);
+    /* margin-top: 20px; */
+    padding: 20px;
+}
 
 .highlight-points-wrapper {
     display: grid;
@@ -717,7 +730,7 @@ nav.navbar {
 
 .stat-title {
     font-size: 1.2rem;
-    font-weight: 500;
+    font-weight: 300;
     margin-bottom: 0;
 }
 
