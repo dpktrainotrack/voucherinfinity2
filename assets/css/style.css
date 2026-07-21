@@ -255,12 +255,13 @@ section:nth-child(even) {
   font-size: 3.5rem;
   line-height: 1.2;
   margin-bottom: 20px;
+  font-weight: 500;
 }
 
 .hero-content h1 span {
-  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: var(--primary-color);
+  /* -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; */
 }
 
 .hero-content p {
@@ -294,34 +295,40 @@ section:nth-child(even) {
 
 
 
-@media screen and (width >=1200px) {
+@media screen and (min-width:992px) {
 
   .our-exam-vouchers .owl-nav button.owl-prev,
   .testimonials-carousel .owl-nav button.owl-prev {
-    left: -40px;
+    left: 0px;
 
   }
 
   .our-exam-vouchers .owl-nav button.owl-next,
   .testimonials-carousel .owl-nav button.owl-next {
-    right: -40px;
+    right: 0px;
 
   }
+}
+
+@media screen and (width <=991px) {
+
+  /* .our-exam-vouchers .owl-nav button.owl-prev, */
+  .testimonials-carousel .owl-nav button.owl-prev {
+    display: none;
+  }
+
+
+  /* .our-exam-vouchers .owl-nav button.owl-next, */
+  .testimonials-carousel .owl-nav button.owl-next {
+    display: none;
+  }
+
 }
 
 /* @media screen and (max-width: 991px) { */
 
 
-.our-exam-vouchers .owl-nav button.owl-prev,
-.testimonials-carousel .owl-nav button.owl-prev {
-  display: none;
-}
 
-
-.our-exam-vouchers .owl-nav button.owl-next,
-.testimonials-carousel .owl-nav button.owl-next {
-  display: none;
-}
 
 /* } */
 
@@ -512,6 +519,7 @@ section:nth-child(even) {
   display: flex;
   flex-direction: column;
   border: 1px solid rgba(0, 0, 0, 0.2);
+  margin-bottom: 4px;
 }
 
 .voucher-card-premium:hover {
@@ -960,8 +968,8 @@ section:nth-child(even) {
 }
 
 .user-info-modern {
-  /* display: flex;
-  align-items: center; */
+  display: flex;
+  align-items: center;
   border-top: 1px solid rgba(0, 0, 0, 0.05);
   padding-top: 20px;
 }
@@ -2187,6 +2195,18 @@ section:nth-child(even) {
   .about-image-wrapper img {
     min-height: 460px;
   }
+
+  .about-intro-section::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    border-bottom: 485px solid #a183f1;
+    border-right: 717px solid transparent;
+    width: 40%;
+    z-index: 0;
+
+  }
 }
 
 
@@ -2864,4 +2884,16 @@ section:nth-child(even) {
   .popup-form {
     padding-top: 20px;
   }
+}
+
+.dropdown .fa-caret-down {
+  font-size: 13px;
+}
+
+
+
+
+section.about-intro-section {
+  position: relative;
+  overflow: hidden;
 }

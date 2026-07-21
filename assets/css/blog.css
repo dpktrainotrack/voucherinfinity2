@@ -192,7 +192,7 @@ article .content p {
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
-    -webkit-line-clamp: 3;
+    -webkit-line-clamp: 4;
 }
 
 article .content h2 {
@@ -215,11 +215,14 @@ article .content h2 {
     display: flex;
     gap: 12px;
     align-items: center;
+    justify-content: space-between;
 
-    margin-bottom: 18px;
+    margin-bottom: 10px;
 
     font-size: .9rem;
     color: #7b7b7b;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
 
 }
 

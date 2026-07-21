@@ -32,6 +32,7 @@
     padding-top: 10px;
     border-radius: 15px;
     /* box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2); */
+    border: 1px solid rgba(255, 255, 255, 0.18);
 
 }
 
@@ -764,7 +765,7 @@ nav.navbar {
 /* ---------- Header Strip ---------- */
 .hef-header {
     /* background: linear-gradient(135deg, var(--primary-color) 0%, #e69603 100%); */
-    padding: 18px 22px 16px;
+    padding: 18px 6px;
     position: relative;
     overflow: hidden;
 }
@@ -801,9 +802,9 @@ nav.navbar {
     align-items: center;
     gap: 5px;
     background: rgba(255, 255, 255, 0.18);
-    border: 1px solid rgba(255, 255, 255, 0.28);
+    /* border: 1px solid rgba(255, 255, 255, 0.28); */
     border-radius: 20px;
-    padding: 3px 9px;
+    padding: 6px;
     font-size: 0.65rem;
     font-weight: 700;
     color: #fff;
@@ -1131,7 +1132,7 @@ nav.navbar {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.75);
+    background: rgba(0, 0, 0, 0.65);
     z-index: 0;
     pointer-events: none;
 }
