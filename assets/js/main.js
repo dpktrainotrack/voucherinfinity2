@@ -34,8 +34,8 @@ document.addEventListener("DOMContentLoaded", () => {
       // center: true,
 
       responsive: {
-        0: { items: 1 },
-        768: { items: 2 },
+        0: { items: 1, dots: true, },
+        768: { items: 2, dots: true, },
         992: { items: 3 },
         1200: { items: 4 },
       },
@@ -57,8 +57,8 @@ document.addEventListener("DOMContentLoaded", () => {
         '<i class="fas fa-chevron-right"></i>',
       ],
       responsive: {
-        0: { items: 1 },
-        768: { items: 1, nav: false },
+        0: { items: 1, nav: false, dots: true, },
+        768: { items: 1, nav: false, dots: true, },
         992: { items: 2 },
       },
     });

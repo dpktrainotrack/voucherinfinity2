@@ -279,7 +279,6 @@ section:nth-child(even) {
   width: 50px;
   height: 50px;
   background: rgba(221, 221, 221, 0.8) !important;
-
   color: #fff !important;
   border-radius: 50% !important;
   font-size: 1.5rem !important;
@@ -312,13 +311,13 @@ section:nth-child(even) {
 
 @media screen and (width <=991px) {
 
-  /* .our-exam-vouchers .owl-nav button.owl-prev, */
+  .our-exam-vouchers .owl-nav button.owl-prev,
   .testimonials-carousel .owl-nav button.owl-prev {
     display: none;
   }
 
 
-  /* .our-exam-vouchers .owl-nav button.owl-next, */
+  .our-exam-vouchers .owl-nav button.owl-next,
   .testimonials-carousel .owl-nav button.owl-next {
     display: none;
   }
@@ -353,19 +352,32 @@ section:nth-child(even) {
   background: var(--primary-color) !important;
 }
 
-.our-exam-vouchers .owl-dots {
+:is(.testimonials-carousel, .our-exam-vouchers) .owl-dots {
   position: absolute;
-  bottom: 30px;
+  bottom: -30px;
   width: 100%;
   text-align: center;
+}
+
+#testimonial-section .container .testimonials-carousel .owl-dots .owl-dot span {
+  width: 12px !important;
+  height: 12px !important;
+  background: rgb(242 183 255 / 50%) !important;
+  margin: 5px 8px !important;
+  transition: var(--transition) !important;
 }
 
 .our-exam-vouchers .owl-dot span {
   width: 12px !important;
   height: 12px !important;
-  background: rgba(255, 255, 255, 0.5) !important;
+  background: rgb(242 183 255 / 50%) !important;
   margin: 5px 8px !important;
   transition: var(--transition) !important;
+}
+
+#testimonial-section .container .testimonials-carousel .owl-dots .owl-dot.active span {
+  background: var(--primary-color) !important;
+  transform: scale(1.3);
 }
 
 .our-exam-vouchers .owl-dot.active span {
