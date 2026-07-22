@@ -207,6 +207,154 @@ section:nth-child(even) {
   width: 100%;
 }
 
+.dropdown-toggle::after {
+  content: "\f107";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  border: none;
+  margin-left: 5px;
+}
+
+@media screen and (width >=1024px) {
+
+  .dropdown-menu {
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.15);
+  }
+}
+
+.dropdown-menu {
+  border-radius: 0px !important;
+  /* border: 1px solid #e0e0e0; */
+
+  border: none !important;
+  box-shadow: none;
+
+  padding-top: 10px;
+  top: 100%;
+
+}
+
+.dropdown-item {
+  padding: 10px 20px;
+  color: #333;
+  font-weight: 500;
+  transition: 0.2s ease;
+}
+
+.dropdown-item:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.voucher-dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.top-header {
+  background-color: #332242;
+  padding: 5px 0px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.top-header a {
+  font-size: 14px;
+}
+
+/* Base state for all items */
+.testimonials-carousel .owl-item {
+  opacity: 0.6;
+  filter: blur(4px);
+  transform: scale(0.9);
+  transition: all 0.5s ease;
+}
+
+/* Active and Centered state */
+.testimonials-carousel .owl-item.center {
+  opacity: 1;
+  filter: blur(0);
+  transform: scale(1);
+  z-index: 10;
+  /* Ensures the center card sits on top */
+}
+
+
+
+.top-header a {
+  color: var(--white);
+  text-decoration: none;
+  margin-right: 15px;
+  transition: var(--transition);
+}
+
+.top-header a:hover {
+  color: var(--accent-color);
+}
+
+.navbar {
+  background-color: var(--white);
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+  padding: 7px 0;
+}
+
+
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+.nav-link {
+  font-weight: 500;
+
+  margin: 0 10px;
+  position: relative;
+  transition: var(--transition);
+  /* color: white; */
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--primary-color) !important;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: var(--primary-color);
+  bottom: 0;
+  left: 0;
+  transition: var(--transition);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+.navbar.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1030;
+  animation: slideDown 0.4s ease-in-out;
+  box-shadow: 0 1px 0 rgba(16, 36, 62, .08);
+  padding: 10px 0;
+  background-color: var(--light-bg);
+
+}
+
+.navbar.sticky .nav-link {
+  color: var(--dark-color);
+}
+
 /* Hero Section */
 
 

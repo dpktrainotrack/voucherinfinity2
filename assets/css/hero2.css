@@ -28,8 +28,8 @@
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     /* border: 1px solid rgba(255, 255, 255, 0.2); */
-    padding: 30px;
-    padding-top: 10px;
+    padding: 40px 30px;
+
     border-radius: 15px;
     /* box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2); */
     border: 1px solid rgba(255, 255, 255, 0.18);
@@ -37,42 +37,6 @@
 }
 
 /* Header & Navbar */
-.top-header {
-    background-color: var(--secondary-blue);
-    color: var(--white);
-    font-size: 0.85rem;
-    padding: 8px 0;
-}
-
-.top-header a {
-    color: var(--white);
-    text-decoration: none;
-    margin-right: 15px;
-    transition: var(--transition);
-}
-
-.top-header a:hover {
-    color: var(--accent-color);
-}
-
-.navbar {
-    background-color: var(--white);
-    box-shadow: var(--shadow-sm);
-    transition: var(--transition);
-    padding: 7px 0;
-}
-
-
-
-@keyframes slideDown {
-    from {
-        transform: translateY(-100%);
-    }
-
-    to {
-        transform: translateY(0);
-    }
-}
 
 /* .navbar-brand {
     font-family: 'Montserrat', sans-serif;
@@ -85,51 +49,6 @@
     color: var(--accent-color);
 } */
 
-.nav-link {
-    font-weight: 500;
-
-    margin: 0 10px;
-    position: relative;
-    transition: var(--transition);
-    /* color: white; */
-}
-
-.nav-link:hover,
-.nav-link.active {
-    color: var(--primary-color) !important;
-}
-
-.nav-link::after {
-    content: '';
-    position: absolute;
-    width: 0%;
-    height: 2px;
-    background-color: var(--primary-color);
-    bottom: 0;
-    left: 0;
-    transition: var(--transition);
-}
-
-.nav-link:hover::after,
-.nav-link.active::after {
-    width: 100%;
-}
-
-.navbar.sticky {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1030;
-    animation: slideDown 0.4s ease-in-out;
-    box-shadow: 0 1px 0 rgba(16, 36, 62, .08);
-    padding: 10px 0;
-    background-color: var(--light-bg);
-
-}
-
-.navbar.sticky .nav-link {
-    color: var(--dark-color);
-}
 
 /* .btn-primary {
   background: var(--gradient-blue);
@@ -1015,7 +934,7 @@ nav.navbar {
     border: none;
     border-radius: 3px;
     font-family: 'Poppins', sans-serif;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 0.88rem;
     cursor: pointer;
     transition: transform 0.25s ease, box-shadow 0.25s ease;
@@ -1041,6 +960,7 @@ nav.navbar {
 .hef-btn:hover {
     transform: translateY(-2px);
     box-shadow: 0 10px 28px rgba(252, 77, 1, 0.42);
+    color: #ffffff;
 }
 
 .hef-btn-txt,
