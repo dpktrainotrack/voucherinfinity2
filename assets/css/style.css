@@ -3058,3 +3058,9 @@ section.about-intro-section {
   position: relative;
   overflow: hidden;
 }
+
+@media screen and(max-width:991px) {
+  .top-header {
+    display: none;
+  }
+}
