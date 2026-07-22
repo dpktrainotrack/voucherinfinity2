@@ -3059,7 +3059,7 @@ section.about-intro-section {
   overflow: hidden;
 }
 
-@media screen and(max-width:991px) {
+@media screen and (max-width:1024px) {
   .top-header {
     display: none;
   }
