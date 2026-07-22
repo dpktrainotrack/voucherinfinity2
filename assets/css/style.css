@@ -599,7 +599,7 @@ section:nth-child(even) {
 /* Categories Section */
 .section-title {
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
 }
 
 .section-title h2 {
@@ -2559,11 +2559,12 @@ section:nth-child(even) {
 }
 
 .about-hero h1 {
-  max-width: 730px;
+  max-width: 830px;
   margin: 20px auto 16px;
   color: #fff;
-  font-size: clamp(2.4rem, 5vw, 4.25rem);
+  font-size: clamp(2.4rem, 5vw, 2.6rem);
   line-height: 1.12;
+  font-weight: 600;
 }
 
 .about-hero .lead {
